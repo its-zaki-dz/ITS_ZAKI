@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITS ZAKI - Premium Digital Experience</title>
+    <title>ITS ZAKI - Digital Experience</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -257,8 +257,8 @@
         }
 
         .profile-image {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             margin-bottom: 2rem;
             border: 6px solid rgba(255, 255, 255, 0.3);
@@ -271,7 +271,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
+            font-size: 4rem;
             color: white;
             background-size: cover;
             background-position: center;
@@ -368,7 +368,7 @@
         }
 
         .main-title {
-            font-size: 8rem;
+            font-size: 6rem;
             font-weight: 900;
             letter-spacing: -0.02em;
             margin-bottom: 1rem;
@@ -386,7 +386,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 300;
             opacity: 0.9;
             margin-bottom: 4rem;
@@ -480,14 +480,6 @@
             gap: 20px;
             z-index: 1000;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        .media-controls.desktop-only {
-            display: flex;
-        }
-
-        .media-controls.mobile-hidden {
-            display: none;
         }
 
         .control-button {
@@ -598,82 +590,6 @@
             opacity: 0.8;
         }
 
-        .ad-banner {
-            position: fixed;
-            top: 50%;
-            right: -300px;
-            width: 280px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 20px;
-            z-index: 1002;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .ad-banner.show {
-            right: 20px;
-            transform: translateY(-50%);
-        }
-
-        .ad-banner .close-ad {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        .ad-banner .close-ad:hover {
-            opacity: 1;
-        }
-
-        .ad-content {
-            text-align: center;
-        }
-
-        .ad-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .ad-description {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        .ad-button {
-            padding: 10px 20px;
-            background: var(--primary-gradient);
-            border: none;
-            border-radius: 25px;
-            color: #fff;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .ad-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--neon-glow);
-        }
-
         /* Mobile and Tablet Specific Styles */
         @media (max-width: 1024px) {
             .background-wallpaper {
@@ -683,25 +599,21 @@
             .mobile-background.mobile-only {
                 display: block;
             }
-            
-            .media-controls.desktop-only {
-                display: none;
-            }
         }
 
         @media (max-width: 768px) {
-            .main-title {
-                font-size: 4.5rem;
-            }
-            
             .brand-logo {
                 font-size: 4rem;
             }
             
-            .profile-image {
-                width: 180px;
-                height: 180px;
+            .main-title {
                 font-size: 4rem;
+            }
+            
+            .profile-image {
+                width: 160px;
+                height: 160px;
+                font-size: 3rem;
             }
             
             .social-grid {
@@ -717,7 +629,7 @@
             }
             
             .hero-subtitle {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
             }
             
             .progress-container {
@@ -727,17 +639,32 @@
 
         @media (max-width: 480px) {
             .main-title {
-                font-size: 3.5rem;
+                font-size: 3rem;
+            }
+            
+            .profile-image {
+                width: 140px;
+                height: 140px;
+                font-size: 2.5rem;
             }
             
             .social-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
             }
             
             .social-link {
                 width: 80px;
                 height: 80px;
                 font-size: 1.8rem;
+            }
+            
+            .social-link span {
+                font-size: 0.7rem;
+            }
+
+            .loader-subtitle {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -747,7 +674,7 @@
     <div class="preloader" id="preloader">
         <div class="loader-content">
             <div class="brand-logo">ITS ZAKI</div>
-            <div class="loader-subtitle">Premium Digital Experience</div>
+            <div class="loader-subtitle">Digital Experience</div>
             <button class="enter-button" onclick="initializeExperience()" id="enterButton">
                 <i class="fas fa-play"></i> Enter Website
             </button>
@@ -786,22 +713,6 @@
         <!-- Notification System -->
         <div class="notification-system" id="notificationSystem"></div>
 
-        <!-- Advertisement Banner -->
-        <div class="ad-banner" id="adBanner">
-            <button class="close-ad" onclick="closeAd()">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="ad-content">
-                <div class="ad-title">🚀 Premium Features</div>
-                <div class="ad-description">
-                    Unlock exclusive content, advanced customization, and priority support with ITS ZAKI Premium!
-                </div>
-                <button class="ad-button" onclick="handleAdClick()">
-                    Get Premium
-                </button>
-            </div>
-        </div>
-
         <!-- Hero Section -->
         <div class="hero-section">
             <!-- Profile Image -->
@@ -810,48 +721,48 @@
             </div>
 
             <h1 class="main-title">ITS ZAKI</h1>
-            <p class="hero-subtitle">Welcome to my premium digital universe where creativity meets technology</p>
+            <p class="hero-subtitle">Welcome to my digital universe where creativity meets technology</p>
             
             <!-- Social Media Grid -->
             <div class="social-grid">
-                <a href="#" class="social-link youtube" onclick="handleSocialClick('YouTube')" data-platform="YouTube">
+                <a href="https://youtube.com/@itszaki" class="social-link youtube" target="_blank" data-platform="YouTube">
                     <i class="fab fa-youtube"></i>
                     <span>YouTube</span>
                 </a>
-                <a href="#" class="social-link snapchat" onclick="handleSocialClick('Snapchat')" data-platform="Snapchat">
+                <a href="https://snapchat.com/add/itszaki_dz" class="social-link snapchat" target="_blank" data-platform="Snapchat">
                     <i class="fab fa-snapchat-ghost"></i>
                     <span>Snapchat</span>
                 </a>
-                <a href="#" class="social-link tiktok" onclick="handleSocialClick('TikTok')" data-platform="TikTok">
+                <a href="https://tiktok.com/@itszaki_dz" class="social-link tiktok" target="_blank" data-platform="TikTok">
                     <i class="fab fa-tiktok"></i>
                     <span>TikTok</span>
                 </a>
-                <a href="#" class="social-link instagram" onclick="handleSocialClick('Instagram')" data-platform="Instagram">
+                <a href="https://instagram.com/itszaki_dz" class="social-link instagram" target="_blank" data-platform="Instagram">
                     <i class="fab fa-instagram"></i>
                     <span>Instagram</span>
                 </a>
-                <a href="#" class="social-link discord" onclick="handleSocialClick('Discord')" data-platform="Discord">
+                <a href="https://discord.gg/itszaki" class="social-link discord" target="_blank" data-platform="Discord">
                     <i class="fab fa-discord"></i>
                     <span>Server</span>
                 </a>
-                <a href="#" class="social-link discord-copy" onclick="copyDiscordUsername()" data-platform="Discord Copy">
+                <a href="#" class="social-link discord-copy" onclick="copyDiscordUsername(event)" data-platform="Discord Copy">
                     <i class="fas fa-user"></i>
                     <span>Copy ID</span>
                 </a>
             </div>
         </div>
 
-        <!-- Desktop Media Controls -->
-        <div class="media-controls desktop-only" id="mediaControls">
+        <!-- Media Controls -->
+        <div class="media-controls" id="mediaControls">
             <button class="control-button" onclick="toggleMusic()" id="musicToggle">
                 <i class="fas fa-play"></i>
             </button>
-            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="60" onchange="adjustVolume()">
-            <div class="volume-display" id="volumeDisplay">60%</div>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50" onchange="adjustVolume()">
+            <div class="volume-display" id="volumeDisplay">50%</div>
         </div>
 
         <!-- Audio Visualizer -->
-        <canvas class="audio-visualizer desktop-only" id="audioVisualizer"></canvas>
+        <canvas class="audio-visualizer" id="audioVisualizer"></canvas>
 
         <!-- Developer Badge -->
         <div class="developer-badge">
@@ -865,8 +776,8 @@
         </div>
     </div>
 
-    <!-- Audio Elements - MP3 Only -->
-    <audio id="backgroundMusic" loop preload="auto">
+    <!-- Audio Element -->
+    <audio id="backgroundMusic" loop preload="auto" volume="0.5">
         <source src="./assets/audio/background-music.mp3" type="audio/mpeg">
     </audio>
 
@@ -908,7 +819,7 @@
             }
             
             init() {
-                const snowflakeCount = AppState.deviceType === 'mobile' ? 50 : AppState.deviceType === 'tablet' ? 80 : 120;
+                const snowflakeCount = AppState.deviceType === 'mobile' ? 30 : AppState.deviceType === 'tablet' ? 50 : 80;
                 for (let i = 0; i < snowflakeCount; i++) {
                     this.snowflakes.push(new Snowflake(this.canvas));
                 }
@@ -990,68 +901,6 @@
             }
         }
 
-        // ZoomManager Class (Fixed Missing Class)
-        class ZoomManager {
-            static init() {
-                console.log('ZoomManager initialized');
-                this.setupZoomControls();
-            }
-            
-            static setupZoomControls() {
-                if (AppState.deviceType === 'mobile' || AppState.deviceType === 'tablet') {
-                    const viewport = document.querySelector('meta[name=viewport]');
-                    if (viewport) {
-                        viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
-                    }
-                }
-            }
-            
-            static resetZoom() {
-                document.body.style.zoom = '1';
-                document.body.style.transform = 'scale(1)';
-            }
-        }
-
-        // PremiumManager Class (Fixed Missing Class)  
-        class PremiumManager {
-            static init() {
-                console.log('PremiumManager initialized');
-                this.checkPremiumStatus();
-                this.setupPremiumFeatures();
-            }
-            
-            static checkPremiumStatus() {
-                const isPremium = false;
-                if (isPremium) {
-                    this.enablePremiumFeatures();
-                } else {
-                    this.showPremiumPrompts();
-                }
-            }
-            
-            static enablePremiumFeatures() {
-                console.log('Premium features enabled');
-                document.body.classList.add('premium-user');
-            }
-            
-            static showPremiumPrompts() {
-                setTimeout(() => {
-                    if (Math.random() > 0.7) {
-                        NotificationManager.show('Upgrade to Premium for exclusive features!', 'info', 4000);
-                    }
-                }, 8000);
-            }
-            
-            static setupPremiumFeatures() {
-                const premiumElements = document.querySelectorAll('[data-premium="true"]');
-                premiumElements.forEach(element => {
-                    element.addEventListener('click', () => {
-                        NotificationManager.show('This is a Premium feature! Upgrade to unlock.', 'warning', 3000);
-                    });
-                });
-            }
-        }
-
         // Device Detection System
         class DeviceDetector {
             static detect() {
@@ -1064,21 +913,18 @@
                     AppState.deviceType = 'mobile';
                     deviceInfo.innerHTML = '<i class="fas fa-mobile-alt"></i> <span>Mobile Device</span>';
                     
-                    if (mediaControls) mediaControls.classList.add('mobile-hidden');
                     if (mobileBackground) mobileBackground.classList.add('mobile-only');
                     
                 } else if (/ipad|tablet/i.test(userAgent)) {
                     AppState.deviceType = 'tablet';
                     deviceInfo.innerHTML = '<i class="fas fa-tablet-alt"></i> <span>Tablet Device</span>';
                     
-                    if (mediaControls) mediaControls.classList.add('mobile-hidden');
                     if (mobileBackground) mobileBackground.classList.add('mobile-only');
                     
                 } else {
                     AppState.deviceType = 'desktop';
                     deviceInfo.innerHTML = '<i class="fas fa-desktop"></i> <span>Desktop Computer</span>';
                     
-                    if (mediaControls) mediaControls.classList.add('desktop-only');
                     if (mobileBackground) mobileBackground.classList.remove('mobile-only');
                 }
             }
@@ -1118,9 +964,9 @@
                 const enterButton = document.getElementById('enterButton');
                 
                 const stages = [
-                    { progress: 15, text: 'Loading wallpapers...', duration: 1000 },
+                    { progress: 15, text: 'Loading assets...', duration: 1000 },
                     { progress: 35, text: 'Detecting device...', duration: 800 },
-                    { progress: 55, text: 'Initializing snow effect...', duration: 1200 },
+                    { progress: 55, text: 'Initializing effects...', duration: 1200 },
                     { progress: 75, text: 'Setting up animations...', duration: 900 },
                     { progress: 90, text: 'Preparing experience...', duration: 700 },
                     { progress: 100, text: 'Ready to enter!', duration: 500 }
@@ -1202,7 +1048,7 @@
             }
             
             init() {
-                const particleCount = AppState.deviceType === 'mobile' ? 30 : AppState.deviceType === 'tablet' ? 50 : 80;
+                const particleCount = AppState.deviceType === 'mobile' ? 20 : AppState.deviceType === 'tablet' ? 35 : 60;
                 for (let i = 0; i < particleCount; i++) {
                     this.particles.push(new Particle(this.canvas));
                 }
@@ -1306,11 +1152,9 @@
             }
         }
 
-        // Enhanced Audio Management System (Desktop Only - MP3 Only)
+        // Enhanced Audio Management System
         class AudioManager {
             static async initialize() {
-                if (AppState.deviceType !== 'desktop') return false;
-                
                 const music = document.getElementById('backgroundMusic');
                 
                 try {
@@ -1318,14 +1162,13 @@
                         AppState.audioContext = new (window.AudioContext || window.webkitAudioContext)();
                     }
                     
-                    // Check if the audio file can be loaded
                     music.addEventListener('canplaythrough', () => {
                         console.log('Audio loaded successfully');
                     });
                     
                     music.addEventListener('error', (e) => {
                         console.log('Audio loading error:', e);
-                        NotificationManager.show('Background music could not be loaded', 'warning', 3000);
+                        NotificationManager.show('Background music unavailable', 'warning', 3000);
                     });
                     
                     const source = AppState.audioContext.createMediaElementSource(music);
@@ -1336,6 +1179,9 @@
                     
                     AppState.analyser.fftSize = 256;
                     
+                    // Set initial volume to 50%
+                    music.volume = 0.5;
+                    
                     return true;
                 } catch (error) {
                     console.log('Audio context initialization failed:', error);
@@ -1344,8 +1190,6 @@
             }
             
             static async toggle() {
-                if (AppState.deviceType !== 'desktop') return;
-                
                 const music = document.getElementById('backgroundMusic');
                 const toggleButton = document.getElementById('musicToggle');
                 
@@ -1368,7 +1212,7 @@
                         NotificationManager.show('Music playing', 'success', 2000);
                     } catch (error) {
                         console.log('Audio play failed:', error);
-                        NotificationManager.show('Failed to play music. Please check the MP3 file.', 'error', 4000);
+                        NotificationManager.show('Failed to play music', 'error', 3000);
                     }
                 }
             }
@@ -1389,7 +1233,7 @@
             }
             
             static startVisualization() {
-                if (!AppState.analyser || AppState.deviceType !== 'desktop') return;
+                if (!AppState.analyser) return;
                 
                 const canvas = document.getElementById('audioVisualizer');
                 const ctx = canvas.getContext('2d');
@@ -1444,78 +1288,15 @@
                     profileElement.style.backgroundSize = 'cover';
                     profileElement.style.backgroundPosition = 'center';
                     profileElement.innerHTML = '';
-                    NotificationManager.show('Profile image loaded successfully', 'success', 2000);
+                    NotificationManager.show('Profile loaded successfully', 'success', 2000);
                 };
                 
                 img.onerror = () => {
                     console.log('Profile image not found, using fallback icon');
-                    NotificationManager.show('Using default profile icon', 'info', 2000);
                 };
                 
                 img.src = FILE_PATHS.PROFILE_IMAGE;
             }
-        }
-
-        // Social Media Click Handler
-        function handleSocialClick(platform) {
-            const platformMessages = {
-                'YouTube': 'Opening YouTube channel...',
-                'Snapchat': 'Opening Snapchat profile...',
-                'TikTok': 'Opening TikTok account...',
-                'Instagram': 'Opening Instagram profile...',
-                'Discord': 'Opening Discord server...'
-            };
-            
-            NotificationManager.show(platformMessages[platform] || `Opening ${platform}...`, 'info', 2000);
-            
-            const link = document.querySelector(`[data-platform="${platform}"]`);
-            if (link) {
-                createRippleEffect(link);
-            }
-            
-            setTimeout(() => {
-                NotificationManager.show(`${platform} would open in a new tab`, 'success', 3000);
-            }, 1000);
-        }
-
-        function createRippleEffect(element) {
-            const ripple = document.createElement('div');
-            ripple.style.position = 'absolute';
-            ripple.style.borderRadius = '50%';
-            ripple.style.background = 'rgba(255, 255, 255, 0.6)';
-            ripple.style.transform = 'scale(0)';
-            ripple.style.animation = 'rippleEffect 0.6s linear';
-            ripple.style.left = '50%';
-            ripple.style.top = '50%';
-            ripple.style.width = '100px';
-            ripple.style.height = '100px';
-            ripple.style.marginLeft = '-50px';
-            ripple.style.marginTop = '-50px';
-            ripple.style.pointerEvents = 'none';
-            
-            element.style.position = 'relative';
-            element.appendChild(ripple);
-            
-            setTimeout(() => ripple.remove(), 600);
-        }
-
-        // Advertisement System
-        function showAdBanner() {
-            const adBanner = document.getElementById('adBanner');
-            setTimeout(() => {
-                adBanner.classList.add('show');
-            }, 5000);
-        }
-
-        function closeAd() {
-            const adBanner = document.getElementById('adBanner');
-            adBanner.classList.remove('show');
-            NotificationManager.show('Advertisement closed', 'info', 2000);
-        }
-
-        function handleAdClick() {
-            NotificationManager.show('Premium features would be available here!', 'info', 3000);
-            closeAd();
         }
 
         // Main Functions
@@ -1543,31 +1324,28 @@
                     new SnowSystem(snowCanvas);
                 }
                 
-                if (AppState.deviceType === 'desktop') {
-                    await AudioManager.initialize();
-                    
-                    setTimeout(async () => {
-                        await toggleMusic();
-                    }, 1500);
-                }
+                // Initialize audio for all devices
+                await AudioManager.initialize();
                 
                 setTimeout(() => {
-                    const deviceMessage = AppState.deviceType === 'desktop' ? 
-                        'Welcome to ITS ZAKI\'s Premium Desktop Experience!' : 
-                        'Welcome to ITS ZAKI\'s Mobile Experience!';
+                    const deviceMessage = 'Welcome to ITS ZAKI\'s Digital Experience!';
                     NotificationManager.show(deviceMessage, 'success', 4000);
                 }, 1000);
                 
-                ZoomManager.init();
-                PremiumManager.init();
-                
+                // Initialize particle system
                 const particleCanvas = document.getElementById('particleCanvas');
                 if (particleCanvas) {
                     new ParticleSystem(particleCanvas);
                 }
                 
-                showAdBanner();
                 setupSocialInteractions();
+                
+                // Auto start music after 2 seconds
+                setTimeout(async () => {
+                    if (!AppState.musicPlaying) {
+                        await toggleMusic();
+                    }
+                }, 2000);
                 
             }, 1000);
         }
@@ -1587,14 +1365,10 @@
         }
 
         async function toggleMusic() {
-            if (AppState.deviceType === 'desktop') {
-                await AudioManager.toggle();
-            }
+            await AudioManager.toggle();
         }
 
         function adjustVolume() {
-            if (AppState.deviceType !== 'desktop') return;
-            
             const slider = document.getElementById('volumeSlider');
             const display = document.getElementById('volumeDisplay');
             const music = document.getElementById('backgroundMusic');
@@ -1607,7 +1381,9 @@
             slider.style.background = `linear-gradient(to right, #667eea 0%, #f093fb ${percentage}%, rgba(255,255,255,0.2) ${percentage}%, rgba(255,255,255,0.2) 100%)`;
         }
 
-        async function copyDiscordUsername() {
+        async function copyDiscordUsername(event) {
+            event.preventDefault();
+            
             try {
                 await navigator.clipboard.writeText(AppState.discordUsername);
                 
@@ -1618,7 +1394,7 @@
                     feedback.classList.remove('show');
                 }, 2500);
                 
-                NotificationManager.show('Discord username copied successfully!', 'success');
+                NotificationManager.show('Discord username copied!', 'success', 2000);
                 
             } catch (error) {
                 const textArea = document.createElement('textarea');
@@ -1628,7 +1404,7 @@
                 document.execCommand('copy');
                 document.body.removeChild(textArea);
                 
-                NotificationManager.show('Discord username copied!', 'success');
+                NotificationManager.show('Discord username copied!', 'success', 2000);
             }
         }
 
@@ -1636,23 +1412,16 @@
         document.addEventListener('DOMContentLoaded', () => {
             LoadingManager.simulate();
             
-            const rippleStyles = document.createElement('style');
-            rippleStyles.textContent = `
-                @keyframes rippleEffect {
-                    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
-                    100% { transform: translate(-50%, -50%) scale(4); opacity: 0; }
-                }
-            `;
-            document.head.appendChild(rippleStyles);
+            // Set initial volume slider styling
+            const volumeSlider = document.getElementById('volumeSlider');
+            volumeSlider.style.background = 'linear-gradient(to right, #667eea 0%, #f093fb 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 100%)';
             
             document.addEventListener('visibilitychange', () => {
-                if (AppState.deviceType === 'desktop') {
-                    const music = document.getElementById('backgroundMusic');
-                    if (document.hidden && AppState.musicPlaying) {
-                        music.pause();
-                    } else if (!document.hidden && AppState.musicPlaying && AppState.userInteracted) {
-                        music.play().catch(console.log);
-                    }
+                const music = document.getElementById('backgroundMusic');
+                if (document.hidden && AppState.musicPlaying) {
+                    music.pause();
+                } else if (!document.hidden && AppState.musicPlaying && AppState.userInteracted) {
+                    music.play().catch(console.log);
                 }
             });
         });
