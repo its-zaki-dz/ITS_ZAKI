@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Viewer Counter</title>
+  <script type="module">
+    // Import Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getDatabase, ref, get, set, update } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+    // Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyASD6RxZQhfPGBMlZ7gHMkCmebrmCEY6Oc",
+      authDomain: "keyx-25c91.firebaseapp.com",
+      databaseURL: "https://keyx-25c91-default-rtdb.firebaseio.com",
+      projectId: "keyx-25c91",
+      storageBucket: "keyx-25c91.firebasestorage.app",
+      messagingSenderId: "298331405661",
+      appId: "1:298331405661:web:2c2a83dad16426b826bcb4"
+    };
+
+    // Init Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    // Cookie helpers
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days*24*60*60*1000));
+      document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+    }
+    function getCookie(name) {
+      const cname = name + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1);
+        if (c.indexOf(cname) === 0) return c.substring(cname.length, c.length);
+      }
+      return "";
+    }
+
+    // Save viewer
+    async function saveViewer() {
+      let viewerId = getCookie("viewer_id");
+
+      if (!viewerId) {
+        // أول مرة يدخل -> نولّد ID جديد
+        viewerId = "viewer_" + Math.random().toString(36).substr(2, 9);
+        setCookie("viewer_id", viewerId, 30); // صالح 30 يوم
+        console.log("New visitor:", viewerId);
+
+        // زوّد العداد مرة واحدة فقط
+        const counterRef = ref(db, "stats/totalViews");
+        const snapshot = await get(counterRef);
+        let count = snapshot.exists() ? snapshot.val() : 0;
+        count++;
+        await set(counterRef, count);
+      } else {
+        console.log("Returning visitor:", viewerId);
+      }
+
+      // تحديث آخر زيارة في Firebase
+      const viewRef = ref(db, "viewers/" + viewerId);
+      await set(viewRef, {
+        lastVisit: Date.now()
+      });
+
+      // قراءة العدد الحالي
+      const snapshot2 = await get(ref(db, "stats/totalViews"));
+      let total = snapshot2.exists() ? snapshot2.val() : 0;
+      document.getElementById("counter").innerText = "Total Views: " + total;
+    }
+
+    window.onload = saveViewer;
+  </script>
+</head>
+<body>
+  <h1>Welcome</h1>
+  <p id="counter">Loading...</p>
+</body>
+</html>
