@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITS ZAKI - Professional Developer Portfolio</title>
+    <title>ITS ZAKI - Fatigue and Effort Index For Programing...</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <meta name="description" content="Welcome To My Site Web By ITS_ZAKI All Link Discord - Instagram - TikTok - YouTube - Snapchat.">
-    <meta name="keywords" content="Site Web By ITS_ZAKI, Developer, Programming, Portfolio">
-    <meta name="author" content="ITS_ZAKI">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+	<meta name="description" content="Welcome To My Site Web By ITS_ZAKI All Link Disocrd - Instgram - TikTok - YouTube - Snapchat.">
+    <meta name="keywords" content="Site Web By ITS_ZAKI">
+    <meta name="author" content="ITS_ZALO">
+    <link rel="icon" type="image/png" href="assets\images\favicon.png">
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
@@ -41,20 +41,22 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* Enhanced Preloader with Better Animation */
         .preloader {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: var(--secondary-gradient);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 10000;
-            transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: var(--secondary-gradient);
         }
 
         .preloader::before {
@@ -64,13 +66,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1), rgba(0, 0, 0, 0.8));
-            animation: pulseBackground 3s ease-in-out infinite;
-        }
-
-        @keyframes pulseBackground {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 0.8; }
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
         }
 
         .preloader.fade-out {
@@ -100,7 +97,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: logoGlow 2s ease-in-out infinite alternate;
-            text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
         }
 
         @keyframes logoGlow {
@@ -113,12 +109,6 @@
             opacity: 0.9;
             margin-bottom: 3rem;
             font-weight: 300;
-            animation: subtitleFade 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes subtitleFade {
-            0% { opacity: 0.7; }
-            100% { opacity: 1; }
         }
 
         .enter-button {
@@ -134,26 +124,17 @@
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            opacity: 0.3;
+            opacity: 0.5;
             pointer-events: none;
-            transform: scale(0.95);
         }
 
         .enter-button.active {
             opacity: 1;
             pointer-events: auto;
-            transform: scale(1);
-            animation: buttonReady 1s ease-out;
-        }
-
-        @keyframes buttonReady {
-            0% { transform: scale(0.95); opacity: 0.3; }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); opacity: 1; }
         }
 
         .enter-button:hover {
-            transform: translateY(-3px) scale(1.05);
+            transform: translateY(-3px);
             box-shadow: var(--neon-glow);
             border-color: rgba(255, 255, 255, 0.4);
         }
@@ -173,35 +154,25 @@
             left: 100%;
         }
 
-        /* Enhanced Progress Bar with Smoother Animation */
         .progress-container {
-            width: 400px;
-            height: 12px;
+            width: 350px;
+            height: 8px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
+            border-radius: 10px;
             margin-top: 2rem;
             overflow: hidden;
             position: relative;
-            box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .progress-bar {
             width: 0%;
             height: 100%;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #667eea);
-            background-size: 200% 100%;
-            border-radius: 15px;
-            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            border-radius: 10px;
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
-            box-shadow: 0 0 25px rgba(102, 126, 234, 0.8);
-            animation: gradientFlow 3s ease-in-out infinite;
-        }
-
-        @keyframes gradientFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
         }
 
         .progress-bar::after {
@@ -211,8 +182,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            animation: progressShine 2.5s infinite;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: progressShine 2s infinite;
         }
 
         @keyframes progressShine {
@@ -223,40 +194,16 @@
         .progress-text {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-top: 0.8rem;
-            font-size: 0.95rem;
-            opacity: 0.9;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
-        .loading-dots {
-            display: inline-flex;
-            gap: 3px;
-        }
-
-        .loading-dots span {
-            width: 6px;
-            height: 6px;
-            background: #fff;
-            border-radius: 50%;
-            animation: loadingDot 1.4s ease-in-out infinite both;
-        }
-
-        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
-        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
-
-        @keyframes loadingDot {
-            0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
-            40% { transform: scale(1.2); opacity: 1; }
-        }
-
-        /* Optimized Main Container */
         .main-container {
             display: none;
             min-height: 100vh;
             position: relative;
             overflow: hidden;
-            will-change: transform;
         }
 
         .background-wallpaper {
@@ -270,7 +217,6 @@
             background-repeat: no-repeat;
             opacity: 0.3;
             z-index: -3;
-            will-change: opacity;
         }
 
         .mobile-background {
@@ -284,7 +230,6 @@
             animation: gradientShift 20s ease infinite;
             z-index: -2;
             display: none;
-            will-change: background-position;
         }
 
         .mobile-background.mobile-only {
@@ -307,7 +252,6 @@
             background: var(--primary-gradient);
             animation: backgroundShift 15s ease-in-out infinite;
             opacity: 0.2;
-            will-change: filter;
         }
 
         @keyframes backgroundShift {
@@ -315,26 +259,21 @@
             50% { filter: hue-rotate(60deg); }
         }
 
-        /* Optimized Canvas Elements */
-        .snow-canvas, .particle-canvas {
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .snow-canvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
-            will-change: transform;
-        }
-
-        .snow-canvas {
             z-index: 5;
         }
 
-        .particle-canvas {
-            z-index: 1;
-        }
-
-        /* Enhanced UI Elements */
         .device-info {
             position: fixed;
             top: 20px;
@@ -347,7 +286,6 @@
             font-size: 0.9rem;
             z-index: 1000;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
         }
 
         .viewer-counter {
@@ -365,7 +303,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            transition: all 0.3s ease;
         }
 
         .viewer-count {
@@ -373,12 +310,6 @@
             font-weight: bold;
             color: #fff;
             font-family: 'Courier New', monospace;
-            animation: countGlow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes countGlow {
-            0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
-            100% { text-shadow: 0 0 15px rgba(240, 147, 251, 0.8); }
         }
 
         .viewer-label {
@@ -405,27 +336,12 @@
             padding: 16px 20px;
             margin-bottom: 10px;
             transform: translateX(400px);
-            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .notification.show {
             transform: translateX(0);
-        }
-
-        .notification.success {
-            border-color: rgba(76, 175, 80, 0.5);
-            background: rgba(76, 175, 80, 0.1);
-        }
-
-        .notification.error {
-            border-color: rgba(244, 67, 54, 0.5);
-            background: rgba(244, 67, 54, 0.1);
-        }
-
-        .notification.warning {
-            border-color: rgba(255, 193, 7, 0.5);
-            background: rgba(255, 193, 7, 0.1);
         }
 
         .toast {
@@ -452,7 +368,6 @@
             transform: translateX(-50%) translateY(-10px);
         }
 
-        /* Enhanced Hero Section */
         .hero-section {
             display: flex;
             flex-direction: column;
@@ -476,7 +391,6 @@
             background-clip: text;
             animation: titlePulse 4s ease-in-out infinite;
             text-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
-            will-change: transform;
         }
 
         @keyframes titlePulse {
@@ -491,15 +405,8 @@
             margin-bottom: 4rem;
             max-width: 600px;
             line-height: 1.4;
-            animation: subtitleSlide 1s ease-out 0.5s both;
         }
 
-        @keyframes subtitleSlide {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 0.9; transform: translateY(0); }
-        }
-
-        /* Enhanced Social Grid */
         .social-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -507,12 +414,6 @@
             max-width: 720px;
             margin: 0 auto 4rem;
             padding: 0 20px;
-            animation: gridFadeIn 1s ease-out 1s both;
-        }
-
-        @keyframes gridFadeIn {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
 
         .social-link {
@@ -532,7 +433,6 @@
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
             overflow: hidden;
-            will-change: transform;
         }
 
         .social-link::before {
@@ -548,7 +448,7 @@
         }
 
         .social-link:hover::before {
-            opacity: 0.15;
+            opacity: 0.1;
         }
 
         .social-link:hover {
@@ -557,19 +457,10 @@
             border-color: rgba(255, 255, 255, 0.4);
         }
 
-        .social-link:active {
-            transform: translateY(-4px) scale(1.02);
-        }
-
         .social-link i {
             position: relative;
             z-index: 2;
             margin-bottom: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-link:hover i {
-            transform: scale(1.1);
         }
 
         .social-link span {
@@ -578,20 +469,10 @@
             font-size: 0.8rem;
             font-weight: 500;
             opacity: 0.8;
-            transition: opacity 0.3s ease;
         }
 
-        .social-link:hover span {
-            opacity: 1;
-        }
-
-        /* Platform-specific styling */
         .youtube { color: #ff0000; }
-        .youtube:hover { box-shadow: 0 0 30px rgba(255, 0, 0, 0.3); }
-
         .snapchat { color: #fffc00; }
-        .snapchat:hover { box-shadow: 0 0 30px rgba(255, 252, 0, 0.3); }
-
         .tiktok { 
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -603,21 +484,10 @@
             background-clip: text;
             font-weight: 900;
         }
-        .tiktok:hover { box-shadow: 0 0 30px rgba(255, 0, 80, 0.3); }
-
         .instagram { color: #e4405f; }
-        .instagram:hover { box-shadow: 0 0 30px rgba(228, 64, 95, 0.3); }
-
         .discord { color: #5865f2; }
-        .discord:hover { box-shadow: 0 0 30px rgba(88, 101, 242, 0.3); }
+        .discord-copy { color: #7289da; }
 
-        .discord-profile { 
-            color: #7289da;
-            background: linear-gradient(135deg, rgba(114, 137, 218, 0.1), rgba(114, 137, 218, 0.2));
-        }
-        .discord-profile:hover { box-shadow: 0 0 30px rgba(114, 137, 218, 0.4); }
-
-        /* Enhanced Media Controls */
         .media-controls {
             position: fixed;
             bottom: 30px;
@@ -633,7 +503,6 @@
             gap: 20px;
             z-index: 1000;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
         }
 
         .control-button {
@@ -649,71 +518,37 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            will-change: transform;
         }
 
         .control-button:hover {
-            transform: scale(1.15);
+            transform: scale(1.1);
             box-shadow: var(--neon-glow);
-        }
-
-        .control-button:active {
-            transform: scale(1.05);
         }
 
         .volume-slider {
             width: 120px;
-            height: 8px;
-            border-radius: 5px;
-            background: linear-gradient(to right, #667eea 0%, #f093fb 100%);
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.2);
             outline: none;
             cursor: pointer;
             -webkit-appearance: none;
-            transition: all 0.3s ease;
         }
 
         .volume-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
             background: var(--primary-gradient);
             cursor: pointer;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .volume-slider:hover::-webkit-slider-thumb {
-            transform: scale(1.2);
-            box-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .volume-display {
             font-weight: 600;
             min-width: 50px;
             text-align: center;
-            font-family: 'Courier New', monospace;
-        }
-
-        /* Enhanced Audio Visualizer */
-        .audio-visualizer {
-            position: fixed;
-            bottom: 120px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 80px;
-            border-radius: 15px;
-            z-index: 999;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .audio-visualizer.active {
-            opacity: 0.9;
         }
 
         .developer-badge {
@@ -728,12 +563,6 @@
             font-size: 0.9rem;
             z-index: 1000;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .developer-badge:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
         }
 
         .copy-feedback {
@@ -743,13 +572,13 @@
             transform: translate(-50%, -50%);
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(76, 175, 80, 0.5);
+            border: 1px solid var(--glass-border);
             border-radius: 15px;
             padding: 20px 30px;
             z-index: 10000;
             opacity: 0;
             transition: all 0.4s ease;
-            box-shadow: 0 8px 32px rgba(76, 175, 80, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .copy-feedback.show {
@@ -757,7 +586,34 @@
             transform: translate(-50%, -50%) scale(1.05);
         }
 
-        /* Performance Optimizations for Mobile */
+        .particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .audio-visualizer {
+            position: fixed;
+            bottom: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 80px;
+            border-radius: 15px;
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .audio-visualizer.active {
+            opacity: 0.8;
+        }
+
+        /* Mobile and Tablet Specific Styles */
         @media (max-width: 1024px) {
             .background-wallpaper {
                 display: none;
@@ -765,15 +621,6 @@
             
             .mobile-background.mobile-only {
                 display: block;
-            }
-            
-            .animated-background {
-                animation: none;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            }
-            
-            .particle-canvas {
-                display: none;
             }
         }
 
@@ -789,12 +636,12 @@
             .social-grid {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 15px;
-                max-width: 320px;
+                max-width: 300px;
             }
             
             .social-link {
-                width: 95px;
-                height: 95px;
+                width: 90px;
+                height: 90px;
                 font-size: 2rem;
             }
             
@@ -803,32 +650,17 @@
             }
             
             .progress-container {
-                width: 300px;
-                height: 10px;
+                width: 280px;
             }
 
             .viewer-counter {
                 top: 70px;
-                right: 15px;
+                right: 20px;
                 font-size: 0.8rem;
-                padding: 10px 15px;
             }
 
             .device-info {
                 font-size: 0.8rem;
-                left: 15px;
-                padding: 10px 15px;
-            }
-
-            .media-controls {
-                padding: 15px 25px;
-                gap: 15px;
-            }
-
-            .control-button {
-                width: 45px;
-                height: 45px;
-                font-size: 1.3rem;
             }
         }
 
@@ -837,19 +669,14 @@
                 font-size: 3rem;
             }
             
-            .brand-logo {
-                font-size: 3.5rem;
-            }
-            
             .social-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-                max-width: 250px;
+                gap: 12px;
             }
             
             .social-link {
-                width: 85px;
-                height: 85px;
+                width: 80px;
+                height: 80px;
                 font-size: 1.8rem;
             }
             
@@ -873,55 +700,6 @@
                 padding: 8px 12px;
                 font-size: 0.75rem;
             }
-
-            .progress-container {
-                width: 250px;
-                height: 8px;
-            }
-
-            .media-controls {
-                bottom: 20px;
-                padding: 12px 20px;
-                gap: 12px;
-            }
-
-            .control-button {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
-            }
-
-            .volume-slider {
-                width: 80px;
-            }
-
-            .audio-visualizer {
-                width: 250px;
-                height: 60px;
-                bottom: 90px;
-            }
-        }
-
-        /* Performance optimization classes */
-        .gpu-accelerated {
-            transform: translateZ(0);
-            will-change: transform;
-        }
-
-        .reduce-motion {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-        }
-
-        /* Prefers reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
         }
     </style>
 </head>
@@ -930,15 +708,15 @@
     <div class="preloader" id="preloader">
         <div class="loader-content">
             <div class="brand-logo">ITS ZAKI</div>
-            <div class="loader-subtitle">Welcome Bro Or My Sister...</div>
+            <div class="loader-subtitle">Welcome Bro Ou My Sister...</div>
             <button class="enter-button" onclick="initializeExperience()" id="enterButton">
-                <i class="fas fa-rocket"></i> Enter My Universe
+                <i class="fas fa-play"></i> Enter Website
             </button>
             <div class="progress-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
             <div class="progress-text">
-                <span id="loadingText">Initializing<div class="loading-dots"><span></span><span></span><span></span></div></span>
+                <span id="loadingText">Initializing...</span>
                 <span id="progressPercent">0%</span>
             </div>
         </div>
@@ -1002,9 +780,9 @@
                     <i class="fab fa-discord"></i>
                     <span>Server</span>
                 </a>
-                <a href="https://discord.com/users/1250579822309146756" class="social-link discord-profile" target="_blank" data-platform="Discord Profile">
-                    <i class="fas fa-user-circle"></i>
-                    <span>Profile</span>
+                <a href="#" class="social-link discord-copy" onclick="copyDiscordUsername(event)" data-platform="Discord Copy">
+                    <i class="fas fa-user"></i>
+                    <span>Copy ID</span>
                 </a>
             </div>
         </div>
@@ -1015,7 +793,7 @@
                 <i class="fas fa-play"></i>
             </button>
             <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50" onchange="adjustVolume()">
-            <div class="volume-display" id="volumeDisplay">50%</div>
+            <div class="volume-display" id="volumeDisplay">100%</div>
         </div>
 
         <!-- Audio Visualizer -->
@@ -1029,7 +807,7 @@
 
         <!-- Copy Feedback -->
         <div class="copy-feedback" id="copyFeedback">
-            <i class="fas fa-check-circle"></i> Discord profile opened!
+            <i class="fas fa-check-circle"></i> Discord username copied to clipboard!
         </div>
 
         <!-- Toast for visitor welcome -->
@@ -1063,117 +841,17 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // PERFORMANCE OPTIMIZATION VARIABLES
-        let rafId;
-        let isTabActive = true;
-        let performanceMode = 'auto'; // 'high', 'balanced', 'performance'
-
         // APPLICATION STATE MANAGEMENT
         const AppState = {
             musicPlaying: false,
             userInteracted: false,
             audioContext: null,
             analyser: null,
-            discordProfileUrl: 'https://discord.com/users/1250579822309146756',
+            discordUsername: 'its_zaki_dz',
             deviceType: 'unknown',
             loadingComplete: false,
-            viewerInitialized: false,
-            effectsEnabled: true,
-            reducedMotion: false
+            viewerInitialized: false
         };
-
-        // Performance detection and optimization
-        function detectPerformanceCapabilities() {
-            const canvas = document.createElement('canvas');
-            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-            
-            let performanceScore = 0;
-            
-            // Check device memory
-            if (navigator.deviceMemory) {
-                performanceScore += navigator.deviceMemory >= 4 ? 20 : navigator.deviceMemory >= 2 ? 10 : 0;
-            }
-            
-            // Check hardware concurrency
-            if (navigator.hardwareConcurrency) {
-                performanceScore += navigator.hardwareConcurrency >= 8 ? 20 : navigator.hardwareConcurrency >= 4 ? 10 : 0;
-            }
-            
-            // Check WebGL support and renderer
-            if (gl) {
-                const renderer = gl.getParameter(gl.RENDERER);
-                if (renderer.includes('Mobile') || renderer.includes('PowerVR')) {
-                    performanceScore -= 10;
-                } else if (renderer.includes('NVIDIA') || renderer.includes('AMD') || renderer.includes('Intel')) {
-                    performanceScore += 15;
-                }
-            }
-            
-            // Check connection speed
-            if (navigator.connection) {
-                const connection = navigator.connection;
-                if (connection.effectiveType === '4g') {
-                    performanceScore += 10;
-                } else if (connection.effectiveType === '3g') {
-                    performanceScore += 5;
-                }
-            }
-            
-            // Determine performance mode
-            if (performanceScore >= 40) {
-                performanceMode = 'high';
-            } else if (performanceScore >= 20) {
-                performanceMode = 'balanced';
-            } else {
-                performanceMode = 'performance';
-            }
-            
-            console.log(`Performance mode: ${performanceMode} (Score: ${performanceScore})`);
-            return performanceMode;
-        }
-
-        // Apply performance optimizations
-        function applyPerformanceOptimizations() {
-            const mode = detectPerformanceCapabilities();
-            
-            // Disable heavy effects on low-performance devices
-            if (mode === 'performance') {
-                AppState.effectsEnabled = false;
-                document.querySelectorAll('.animated-background, .particle-canvas').forEach(el => {
-                    el.style.display = 'none';
-                });
-                
-                // Reduce animation complexity
-                document.body.classList.add('reduce-motion');
-            }
-            
-            // Check for reduced motion preference
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                AppState.reducedMotion = true;
-                document.body.classList.add('reduce-motion');
-            }
-        }
-
-        // Visibility change handler for performance
-        document.addEventListener('visibilitychange', () => {
-            isTabActive = !document.hidden;
-            
-            if (!isTabActive) {
-                // Pause animations and effects when tab is not active
-                if (rafId) {
-                    cancelAnimationFrame(rafId);
-                }
-            } else {
-                // Resume animations when tab becomes active
-                if (AppState.effectsEnabled) {
-                    resumeAnimations();
-                }
-            }
-        });
-
-        function resumeAnimations() {
-            // This will be called by individual animation systems
-        }
 
         // Cookie helpers
         function setCookie(name, value, days) {
@@ -1194,51 +872,29 @@
             return "";
         }
 
-        // Enhanced Toast function
-        function showToast(message, type = 'info') {
+        // Toast function
+        function showToast(message) {
             const toast = document.getElementById("toast");
             toast.textContent = message;
-            toast.className = `toast ${type}`;
             toast.classList.add("show");
             setTimeout(() => {
                 toast.classList.remove("show");
             }, 4000);
         }
 
-        // Enhanced Visitor Management System with Offline Support
+        // Visitor Management System
         class VisitorManager {
             static async initialize() {
                 try {
-                    if (firebaseInitialized) {
-                        await this.saveViewer();
-                        this.listenToViewerCount();
-                    } else {
-                        this.initializeOfflineMode();
-                    }
+                    await this.saveViewer();
+                    this.listenToViewerCount();
                     AppState.viewerInitialized = true;
                 } catch (error) {
-                    console.log('Visitor tracking initialization failed, using offline mode:', error);
-                    this.initializeOfflineMode();
+                    console.log('Visitor tracking initialization failed:', error);
                 }
             }
 
-            static initializeOfflineMode() {
-                // Use local storage fallback or random counter
-                let localCount = parseInt(getCookie("offline_visitors")) || Math.floor(Math.random() * 500) + 100;
-                localCount += 1;
-                setCookie("offline_visitors", localCount, 30);
-                
-                const countElement = document.getElementById("viewerCount");
-                this.animateCounter(countElement, localCount);
-                
-                NotificationManager.show('Running in offline mode', 'info', 2000);
-            }
-
             static async saveViewer() {
-                if (!firebaseInitialized || !window.firebaseUtils) return;
-                
-                const { doc, setDoc, getDoc, updateDoc, increment } = window.firebaseUtils;
-                
                 let viewerId = getCookie("viewer_id");
 
                 if (!viewerId) {
@@ -1255,68 +911,35 @@
 
                     // Show welcome message for new visitors
                     setTimeout(() => {
-                        showToast("Welcome To My Site Web By ITS_ZAKI", 'success');
-                        NotificationManager.show('Thank you for visiting my digital universe!', 'success', 4000);
-                    }, 3000);
+                        showToast("Welcome To My Site Web By ITS_ZAKI");
+                        NotificationManager.show('Thank you for visiting!', 'success', 3000);
+                    }, 2000);
                 }
 
                 const viewerRef = doc(db, "viewers", viewerId);
-                await setDoc(viewerRef, { 
-                    lastVisit: Date.now(),
-                    device: AppState.deviceType,
-                    userAgent: navigator.userAgent
-                });
+                await setDoc(viewerRef, { lastVisit: Date.now() });
             }
 
             static listenToViewerCount() {
-                if (!firebaseInitialized || !window.firebaseUtils) return;
-                
-                const { doc, onSnapshot } = window.firebaseUtils;
                 const statsRef = doc(db, "stats", "global");
-                
                 onSnapshot(statsRef, (docSnap) => {
                     const countElement = document.getElementById("viewerCount");
                     if (docSnap.exists()) {
                         const count = docSnap.data().totalViews;
-                        this.animateCounter(countElement, count);
+                        countElement.innerText = count.toLocaleString();
                     } else {
-                        countElement.innerText = "1";
+                        countElement.innerText = "0";
                     }
-                }, (error) => {
-                    console.log('Real-time updates failed:', error);
-                    this.initializeOfflineMode();
                 });
-            }
-
-            static animateCounter(element, targetValue) {
-                const currentValue = parseInt(element.innerText.replace(/,/g, '')) || 0;
-                const increment = Math.ceil((targetValue - currentValue) / 20);
-                
-                if (currentValue < targetValue) {
-                    element.innerText = Math.min(currentValue + increment, targetValue).toLocaleString();
-                    setTimeout(() => this.animateCounter(element, targetValue), 50);
-                } else {
-                    element.innerText = targetValue.toLocaleString();
-                }
-            }
-                static animateCounter(element, targetValue) {
-                const currentValue = parseInt(element.innerText.replace(/,/g, '')) || 0;
-                const increment = Math.ceil((targetValue - currentValue) / 20);
-                
-                if (currentValue < targetValue) {
-                    element.innerText = Math.min(currentValue + increment, targetValue).toLocaleString();
-                    setTimeout(() => this.animateCounter(element, targetValue), 50);
-                }
             }
         }
 
-        // Optimized Snow Effect System
+        // Snow Effect System
         class SnowSystem {
             constructor(canvas) {
                 this.canvas = canvas;
                 this.ctx = canvas.getContext('2d');
                 this.snowflakes = [];
-                this.lastTime = 0;
                 this.resize();
                 this.init();
                 this.bindEvents();
@@ -1329,18 +952,7 @@
             }
             
             init() {
-                let snowflakeCount = 80; // Default for desktop
-                
-                if (performanceMode === 'performance') {
-                    snowflakeCount = 20;
-                } else if (performanceMode === 'balanced') {
-                    snowflakeCount = 40;
-                } else if (AppState.deviceType === 'mobile') {
-                    snowflakeCount = 30;
-                } else if (AppState.deviceType === 'tablet') {
-                    snowflakeCount = 50;
-                }
-
+                const snowflakeCount = AppState.deviceType === 'mobile' ? 30 : AppState.deviceType === 'tablet' ? 50 : 80;
                 for (let i = 0; i < snowflakeCount; i++) {
                     this.snowflakes.push(new Snowflake(this.canvas));
                 }
@@ -1350,19 +962,7 @@
                 window.addEventListener('resize', () => this.resize());
             }
             
-            animate(currentTime = 0) {
-                if (!isTabActive || !AppState.effectsEnabled) {
-                    rafId = requestAnimationFrame((time) => this.animate(time));
-                    return;
-                }
-
-                const deltaTime = currentTime - this.lastTime;
-                if (deltaTime < 16.67) { // Limit to 60fps
-                    rafId = requestAnimationFrame((time) => this.animate(time));
-                    return;
-                }
-
-                this.lastTime = currentTime;
+            animate() {
                 this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
                 
                 this.snowflakes.forEach(snowflake => {
@@ -1370,11 +970,11 @@
                     snowflake.draw(this.ctx);
                 });
                 
-                rafId = requestAnimationFrame((time) => this.animate(time));
+                requestAnimationFrame(() => this.animate());
             }
         }
 
-        // Optimized Snowflake Class
+        // Individual Snowflake Class
         class Snowflake {
             constructor(canvas) {
                 this.canvas = canvas;
@@ -1395,10 +995,7 @@
             update() {
                 this.y += this.speed;
                 this.x += this.wind;
-                
-                if (!AppState.reducedMotion) {
-                    this.rotation += this.rotationSpeed;
-                }
+                this.rotation += this.rotationSpeed;
                 
                 // Reset snowflake when it goes off screen
                 if (this.y > this.canvas.height + 10) {
@@ -1418,25 +1015,20 @@
             draw(ctx) {
                 ctx.save();
                 ctx.translate(this.x, this.y);
-                
-                if (!AppState.reducedMotion) {
-                    ctx.rotate(this.rotation * Math.PI / 180);
-                }
-                
+                ctx.rotate(this.rotation * Math.PI / 180);
                 ctx.globalAlpha = this.opacity;
                 
-                // Optimized drawing
+                // Draw snowflake
                 ctx.fillStyle = '#ffffff';
                 ctx.beginPath();
                 ctx.arc(0, 0, this.size, 0, Math.PI * 2);
                 ctx.fill();
                 
-                // Add sparkle effect only on high performance
-                if (performanceMode === 'high') {
-                    ctx.shadowBlur = 10;
-                    ctx.shadowColor = '#ffffff';
-                    ctx.fill();
-                }
+                // Add sparkle effect
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = '#ffffff';
+                ctx.fill();
                 
                 ctx.restore();
             }
@@ -1447,6 +1039,7 @@
             static detect() {
                 const userAgent = navigator.userAgent.toLowerCase();
                 const deviceInfo = document.getElementById('deviceInfo');
+                const mediaControls = document.getElementById('mediaControls');
                 const mobileBackground = document.querySelector('.mobile-background');
                 
                 if (/android|webos|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent)) {
@@ -1467,22 +1060,15 @@
                     
                     if (mobileBackground) mobileBackground.classList.remove('mobile-only');
                 }
-
-                // Add device-specific optimizations
-                if (AppState.deviceType === 'mobile') {
-                    document.body.style.fontSize = '14px';
-                } else if (AppState.deviceType === 'tablet') {
-                    document.body.style.fontSize = '15px';
-                }
             }
         }
 
-        // Enhanced Notification Management System
+        // Notification Management System
         class NotificationManager {
             static show(message, type = 'info', duration = 4000) {
                 const container = document.getElementById('notificationSystem');
                 const notification = document.createElement('div');
-                notification.className = `notification ${type}`;
+                notification.className = 'notification';
                 
                 const icons = {
                     info: 'fas fa-info-circle',
@@ -1494,22 +1080,15 @@
                 notification.innerHTML = `<i class="${icons[type]}"></i> ${message}`;
                 container.appendChild(notification);
                 
-                // Animate in
                 setTimeout(() => notification.classList.add('show'), 100);
-                
-                // Animate out
                 setTimeout(() => {
                     notification.classList.remove('show');
-                    setTimeout(() => {
-                        if (container.contains(notification)) {
-                            container.removeChild(notification);
-                        }
-                    }, 500);
+                    setTimeout(() => container.removeChild(notification), 500);
                 }, duration);
             }
         }
 
-        // Enhanced Loading System with More Delays
+        // Enhanced Loading System
         class LoadingManager {
             static simulate() {
                 const progressBar = document.getElementById('progressBar');
@@ -1518,16 +1097,12 @@
                 const enterButton = document.getElementById('enterButton');
                 
                 const stages = [
-                    { progress: 8, text: 'Connecting to server', duration: 1500 },
-                    { progress: 18, text: 'Loading assets', duration: 1200 },
-                    { progress: 28, text: 'Detecting device', duration: 1000 },
-                    { progress: 40, text: 'Optimizing performance', duration: 1300 },
-                    { progress: 52, text: 'Initializing effects', duration: 1500 },
-                    { progress: 65, text: 'Setting up animations', duration: 1200 },
-                    { progress: 78, text: 'Loading social media', duration: 1000 },
-                    { progress: 88, text: 'Preparing audio system', duration: 1100 },
-                    { progress: 95, text: 'Finalizing experience', duration: 800 },
-                    { progress: 100, text: 'Ready to enter', duration: 600 }
+                    { progress: 15, text: 'Loading assets...', duration: 1000 },
+                    { progress: 35, text: 'Detecting device...', duration: 800 },
+                    { progress: 55, text: 'Initializing effects...', duration: 1200 },
+                    { progress: 75, text: 'Setting up animations...', duration: 900 },
+                    { progress: 90, text: 'Preparing experience...', duration: 700 },
+                    { progress: 100, text: 'Ready to enter!', duration: 500 }
                 ];
                 
                 let currentStage = 0;
@@ -1541,26 +1116,23 @@
                         
                         const animateProgress = () => {
                             if (currentProgress < targetProgress) {
-                                currentProgress += Math.random() * 3 + 1; // Random increment for more realistic feel
-                                const displayProgress = Math.min(currentProgress, targetProgress);
-                                progressBar.style.width = displayProgress + '%';
-                                progressPercent.textContent = Math.floor(displayProgress) + '%';
+                                currentProgress += 2;
+                                progressBar.style.width = Math.min(currentProgress, targetProgress) + '%';
+                                progressPercent.textContent = Math.min(currentProgress, targetProgress) + '%';
                                 
                                 if (currentProgress < targetProgress) {
-                                    setTimeout(animateProgress, Math.random() * 100 + 50);
+                                    setTimeout(animateProgress, 50);
                                 }
                             }
                         };
                         
                         animateProgress();
-                        loadingText.innerHTML = stage.text + '<div class="loading-dots"><span></span><span></span><span></span></div>';
+                        loadingText.textContent = stage.text;
                         
                         if (stage.progress === 100) {
                             AppState.loadingComplete = true;
-                            setTimeout(() => {
-                                enterButton.classList.add('active');
-                                this.showCompletionEffect();
-                            }, 500);
+                            enterButton.classList.add('active');
+                            this.showCompletionEffect();
                         }
                         
                         currentStage++;
@@ -1568,44 +1140,35 @@
                     }
                 };
                 
-                // Start loading after initial delay
-                setTimeout(updateProgress, 800);
+                setTimeout(updateProgress, 500);
             }
             
             static showCompletionEffect() {
                 const progressBar = document.getElementById('progressBar');
-                const enterButton = document.getElementById('enterButton');
-                const loadingText = document.getElementById('loadingText');
-                
                 progressBar.style.boxShadow = '0 0 30px rgba(102, 126, 234, 1)';
-                loadingText.innerHTML = 'Ready to enter! <i class="fas fa-rocket"></i>';
                 
+                const enterButton = document.getElementById('enterButton');
                 enterButton.style.animation = 'pulse 2s infinite';
                 
                 const completionStyles = document.createElement('style');
                 completionStyles.textContent = `
                     @keyframes pulse {
-                        0% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); transform: scale(1); }
-                        50% { box-shadow: 0 0 40px rgba(102, 126, 234, 0.8); transform: scale(1.05); }
-                        100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); transform: scale(1); }
+                        0% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
+                        50% { box-shadow: 0 0 40px rgba(102, 126, 234, 0.8); }
+                        100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
                     }
                 `;
                 document.head.appendChild(completionStyles);
             }
         }
 
-        // Optimized Particle Physics Engine
+        // Particle Physics Engine
         class ParticleSystem {
             constructor(canvas) {
-                if (performanceMode === 'performance' || AppState.deviceType === 'mobile') {
-                    return; // Skip particle system on low-performance devices
-                }
-                
                 this.canvas = canvas;
                 this.ctx = canvas.getContext('2d');
                 this.particles = [];
                 this.mouse = { x: 0, y: 0 };
-                this.lastTime = 0;
                 this.resize();
                 this.init();
                 this.bindEvents();
@@ -1618,14 +1181,7 @@
             }
             
             init() {
-                let particleCount = 60;
-                
-                if (performanceMode === 'balanced') {
-                    particleCount = 35;
-                } else if (AppState.deviceType === 'tablet') {
-                    particleCount = 40;
-                }
-                
+                const particleCount = AppState.deviceType === 'mobile' ? 20 : AppState.deviceType === 'tablet' ? 35 : 60;
                 for (let i = 0; i < particleCount; i++) {
                     this.particles.push(new Particle(this.canvas));
                 }
@@ -1633,16 +1189,9 @@
             
             bindEvents() {
                 window.addEventListener('resize', () => this.resize());
-                
-                // Throttle mouse events for better performance
-                let mouseTimeout;
                 document.addEventListener('mousemove', (e) => {
-                    if (mouseTimeout) return;
-                    mouseTimeout = setTimeout(() => {
-                        this.mouse.x = e.clientX;
-                        this.mouse.y = e.clientY;
-                        mouseTimeout = null;
-                    }, 16);
+                    this.mouse.x = e.clientX;
+                    this.mouse.y = e.clientY;
                 });
                 
                 document.addEventListener('touchmove', (e) => {
@@ -1653,19 +1202,7 @@
                 });
             }
             
-            animate(currentTime = 0) {
-                if (!isTabActive || !AppState.effectsEnabled) {
-                    rafId = requestAnimationFrame((time) => this.animate(time));
-                    return;
-                }
-
-                const deltaTime = currentTime - this.lastTime;
-                if (deltaTime < 33.33) { // Limit to 30fps for particles
-                    rafId = requestAnimationFrame((time) => this.animate(time));
-                    return;
-                }
-
-                this.lastTime = currentTime;
+            animate() {
                 this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
                 
                 this.particles.forEach(particle => {
@@ -1673,11 +1210,8 @@
                     particle.draw(this.ctx);
                 });
                 
-                if (performanceMode === 'high') {
-                    this.drawConnections();
-                }
-                
-                rafId = requestAnimationFrame((time) => this.animate(time));
+                this.drawConnections();
+                requestAnimationFrame(() => this.animate());
             }
             
             drawConnections() {
@@ -1701,7 +1235,7 @@
             }
         }
 
-        // Optimized Particle Class
+        // Individual Particle Class
         class Particle {
             constructor(canvas) {
                 this.canvas = canvas;
@@ -1721,20 +1255,16 @@
                 this.x += this.vx;
                 this.y += this.vy;
                 
-                // Only calculate mouse interaction on high performance mode
-                if (performanceMode === 'high') {
-                    const dx = mouse.x - this.x;
-                    const dy = mouse.y - this.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (distance < 80) {
-                        const force = (80 - distance) / 80 * 0.3;
-                        this.vx -= dx * force * 0.01;
-                        this.vy -= dy * force * 0.01;
-                    }
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 80) {
+                    const force = (80 - distance) / 80 * 0.3;
+                    this.vx -= dx * force * 0.01;
+                    this.vy -= dy * force * 0.01;
                 }
                 
-                // Boundary checking
                 if (this.x < 0 || this.x > this.canvas.width) this.vx *= -1;
                 if (this.y < 0 || this.y > this.canvas.height) this.vy *= -1;
                 
@@ -1748,13 +1278,10 @@
                 ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
                 ctx.fill();
                 
-                // Add glow effect only on high performance
-                if (performanceMode === 'high') {
-                    ctx.shadowBlur = 8;
-                    ctx.shadowColor = `rgba(240, 147, 251, ${this.opacity})`;
-                    ctx.fill();
-                    ctx.shadowBlur = 0;
-                }
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = `rgba(240, 147, 251, ${this.opacity})`;
+                ctx.fill();
+                ctx.shadowBlur = 0;
             }
         }
 
@@ -1770,7 +1297,6 @@
                     
                     music.addEventListener('canplaythrough', () => {
                         console.log('Audio loaded successfully');
-                        NotificationManager.show('Audio system ready', 'success', 2000);
                     });
                     
                     music.addEventListener('error', (e) => {
@@ -1785,10 +1311,9 @@
                     AppState.analyser.connect(AppState.audioContext.destination);
                     
                     AppState.analyser.fftSize = 256;
-                    AppState.analyser.smoothingTimeConstant = 0.8;
                     
-                    // Set initial volume
-                    music.volume = 0.5;
+                    // Set initial volume to 100%
+                    music.volume = 0.10;
                     
                     return true;
                 } catch (error) {
@@ -1820,14 +1345,14 @@
                         NotificationManager.show('Music playing', 'success', 2000);
                     } catch (error) {
                         console.log('Audio play failed:', error);
-                        NotificationManager.show('Failed to play music - Click to enable audio', 'error', 4000);
+                        NotificationManager.show('Failed to play music', 'error', 3000);
                     }
                 }
             }
             
             static showVisualizer() {
                 const visualizer = document.getElementById('audioVisualizer');
-                if (visualizer && performanceMode !== 'performance') {
+                if (visualizer) {
                     visualizer.classList.add('active');
                     this.startVisualization();
                 }
@@ -1841,7 +1366,7 @@
             }
             
             static startVisualization() {
-                if (!AppState.analyser || performanceMode === 'performance') return;
+                if (!AppState.analyser) return;
                 
                 const canvas = document.getElementById('audioVisualizer');
                 const ctx = canvas.getContext('2d');
@@ -1850,15 +1375,11 @@
                 
                 const bufferLength = AppState.analyser.frequencyBinCount;
                 const dataArray = new Uint8Array(bufferLength);
-                let animationId;
                 
                 const animate = () => {
-                    if (!AppState.musicPlaying || !isTabActive) {
-                        cancelAnimationFrame(animationId);
-                        return;
-                    }
+                    if (!AppState.musicPlaying) return;
                     
-                    animationId = requestAnimationFrame(animate);
+                    requestAnimationFrame(animate);
                     AppState.analyser.getByteFrequencyData(dataArray);
                     
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -1867,7 +1388,7 @@
                     let x = 0;
                     
                     for (let i = 0; i < bufferLength; i++) {
-                        const barHeight = (dataArray[i] / 255) * canvas.height * 0.8;
+                        const barHeight = (dataArray[i] / 255) * canvas.height;
                         
                         const gradient = ctx.createLinearGradient(0, canvas.height, 0, 0);
                         gradient.addColorStop(0, '#667eea');
@@ -1876,15 +1397,6 @@
                         
                         ctx.fillStyle = gradient;
                         ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-                        
-                        // Add reflection effect on high performance
-                        if (performanceMode === 'high') {
-                            const reflectionGradient = ctx.createLinearGradient(0, canvas.height, 0, canvas.height + 20);
-                            reflectionGradient.addColorStop(0, `rgba(102, 126, 234, ${dataArray[i] / 255 * 0.3})`);
-                            reflectionGradient.addColorStop(1, 'rgba(102, 126, 234, 0)');
-                            ctx.fillStyle = reflectionGradient;
-                            ctx.fillRect(x, canvas.height, barWidth, 20);
-                        }
                         
                         x += barWidth + 1;
                     }
@@ -1897,7 +1409,7 @@
         // Global Functions
         window.initializeExperience = async function() {
             if (!AppState.loadingComplete) {
-                NotificationManager.show('Please wait for loading to complete...', 'warning', 2500);
+                NotificationManager.show('Please wait for loading to complete', 'warning', 2000);
                 return;
             }
             
@@ -1910,90 +1422,53 @@
                 preloader.style.display = 'none';
                 document.getElementById('mainContainer').style.display = 'block';
                 
-                // Apply performance optimizations first
-                applyPerformanceOptimizations();
-                
-                // Detect device
                 DeviceDetector.detect();
                 
                 // Initialize visitor tracking
                 await VisitorManager.initialize();
                 
                 // Initialize snow effect
-                if (AppState.effectsEnabled) {
-                    const snowCanvas = document.getElementById('snowCanvas');
-                    if (snowCanvas) {
-                        new SnowSystem(snowCanvas);
-                    }
-                    
-                    // Initialize particle system (will skip on low-performance devices)
-                    const particleCanvas = document.getElementById('particleCanvas');
-                    if (particleCanvas) {
-                        new ParticleSystem(particleCanvas);
-                    }
+                const snowCanvas = document.getElementById('snowCanvas');
+                if (snowCanvas) {
+                    new SnowSystem(snowCanvas);
                 }
                 
-                // Initialize audio system
+                // Initialize audio for all devices
                 await AudioManager.initialize();
                 
-                // Welcome message based on device
                 setTimeout(() => {
-                    let deviceMessage = 'Welcome to ITS ZAKI\'s digital universe!';
-                    
-                    if (AppState.deviceType === 'mobile') {
-                        deviceMessage = 'Mobile experience optimized for you!';
-                    } else if (AppState.deviceType === 'tablet') {
-                        deviceMessage = 'Tablet experience ready!';
-                    } else {
-                        deviceMessage = 'Desktop experience fully loaded!';
-                    }
-                    
+                    const deviceMessage = 'Welcome to ITS ZAKI\'s Fatigue and Effort Index For Programing...!';
                     NotificationManager.show(deviceMessage, 'success', 4000);
-                }, 1500);
+                }, 1000);
                 
-                // Setup social interactions
+                // Initialize particle system
+                const particleCanvas = document.getElementById('particleCanvas');
+                if (particleCanvas) {
+                    new ParticleSystem(particleCanvas);
+                }
+                
                 setupSocialInteractions();
                 
-                // Auto start music after delay
+                // Auto start music after 2 seconds
                 setTimeout(async () => {
                     if (!AppState.musicPlaying) {
                         await toggleMusic();
                     }
-                }, 3000);
+                }, 2000);
                 
-            }, 1200);
+            }, 1000);
         };
 
         function setupSocialInteractions() {
             const socialLinks = document.querySelectorAll('.social-link');
             
             socialLinks.forEach(link => {
-                // Add GPU acceleration
-                link.classList.add('gpu-accelerated');
-                
                 link.addEventListener('mouseenter', () => {
-                    if (!AppState.reducedMotion) {
-                        link.style.transform = 'translateY(-8px) scale(1.05)';
-                    }
+                    link.style.transform = 'translateY(-8px) scale(1.05)';
                 });
                 
                 link.addEventListener('mouseleave', () => {
                     link.style.transform = 'translateY(0) scale(1)';
-                });
-                
-                // Add click feedback
-                link.addEventListener('click', (e) => {
-                    const platform = link.getAttribute('data-platform');
-                    
-                    if (platform !== 'Discord Profile') {
-                        NotificationManager.show(`Opening ${platform}...`, 'info', 2000);
-                    }
-                    
-                    // Visual feedback
-                    link.style.transform = 'translateY(-4px) scale(1.02)';
-                    setTimeout(() => {
-                        link.style.transform = 'translateY(-8px) scale(1.05)';
-                    }, 150);
                 });
             });
         }
@@ -2003,11 +1478,6 @@
         };
 
         window.adjustVolume = function() {
-            if (!AppState.audioEnabled) {
-                NotificationManager.show('Audio system not available', 'warning', 1500);
-                return;
-            }
-            
             const slider = document.getElementById('volumeSlider');
             const display = document.getElementById('volumeDisplay');
             const music = document.getElementById('backgroundMusic');
@@ -2016,146 +1486,64 @@
             music.volume = volume;
             display.textContent = slider.value + '%';
             
-            // Update slider appearance
             const percentage = slider.value;
             slider.style.background = `linear-gradient(to right, #667eea 0%, #f093fb ${percentage}%, rgba(255,255,255,0.2) ${percentage}%, rgba(255,255,255,0.2) 100%)`;
+        };
+
+        window.copyDiscordUsername = async function(event) {
+            event.preventDefault();
             
-            // Show volume feedback only if user has interacted
-            if (AppState.userInteracted) {
-                NotificationManager.show(`Volume: ${slider.value}%`, 'info', 1500);
+            try {
+                await navigator.clipboard.writeText(AppState.discordUsername);
+                
+                const feedback = document.getElementById('copyFeedback');
+                feedback.classList.add('show');
+                
+                setTimeout(() => {
+                    feedback.classList.remove('show');
+                }, 2500);
+                
+                NotificationManager.show('Discord username copied!', 'success', 2000);
+                
+            } catch (error) {
+                const textArea = document.createElement('textarea');
+                textArea.value = AppState.discordUsername;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                NotificationManager.show('Discord username copied!', 'success', 2000);
             }
         };
 
-        // Enhanced interaction tracking with offline fallback
-        function trackSocialClick(platform) {
-            if (!firebaseInitialized || !window.firebaseUtils) return;
-            
-            try {
-                const { doc, updateDoc, setDoc, increment } = window.firebaseUtils;
-                const clickRef = doc(db, "analytics", "social_clicks");
-                
-                updateDoc(clickRef, {
-                    [platform.toLowerCase()]: increment(1),
-                    lastUpdate: Date.now()
-                }).catch(() => {
-                    setDoc(clickRef, {
-                        [platform.toLowerCase()]: 1,
-                        lastUpdate: Date.now()
-                    });
-                });
-            } catch (error) {
-                console.log('Analytics tracking failed:', error);
-            }
-        }
-
         // Initialize everything when DOM loads
         document.addEventListener('DOMContentLoaded', () => {
-            // Apply performance optimizations immediately
-            applyPerformanceOptimizations();
-            
-            // Start loading simulation
             LoadingManager.simulate();
             
             // Set initial volume slider styling
             const volumeSlider = document.getElementById('volumeSlider');
-            volumeSlider.style.background = 'linear-gradient(to right, #667eea 0%, #f093fb 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 100%)';
+            volumeSlider.style.background = 'linear-gradient(to right, #667eea 0%, #f093fb 100%, rgba(255,255,255,0.2) 100%, rgba(255,255,255,0.2) 100%)';
             
-            // Enhanced visibility change handler
             document.addEventListener('visibilitychange', () => {
-                isTabActive = !document.hidden;
                 const music = document.getElementById('backgroundMusic');
-                
                 if (document.hidden && AppState.musicPlaying) {
                     music.pause();
                 } else if (!document.hidden && AppState.musicPlaying && AppState.userInteracted) {
                     music.play().catch(console.log);
                 }
             });
-
-            // Add keyboard shortcuts
-            document.addEventListener('keydown', (e) => {
-                if (AppState.userInteracted) {
-                    switch(e.code) {
-                        case 'Space':
-                            e.preventDefault();
-                            toggleMusic();
-                            break;
-                        case 'ArrowUp':
-                            e.preventDefault();
-                            adjustVolumeByKey(10);
-                            break;
-                        case 'ArrowDown':
-                            e.preventDefault();
-                            adjustVolumeByKey(-10);
-                            break;
-                    }
-                }
-            });
         });
 
-        function adjustVolumeByKey(change) {
-            const slider = document.getElementById('volumeSlider');
-            const newValue = Math.max(0, Math.min(100, parseInt(slider.value) + change));
-            slider.value = newValue;
-            adjustVolume();
-        }
-
-        // Window resize optimization
-        let resizeTimeout;
         window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                DeviceDetector.detect();
-                applyPerformanceOptimizations();
-            }, 250);
+            DeviceDetector.detect();
         });
 
-        // Disable right-click and text selection with enhanced feedback
-        document.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
-            if (AppState.userInteracted) {
-                NotificationManager.show('Right-click disabled for protection', 'warning', 2000);
-            }
-        });
-
+        // Disable right-click and text selection
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
         document.addEventListener('selectstart', (e) => e.preventDefault());
         document.addEventListener('copy', (e) => e.preventDefault());
         document.addEventListener('cut', (e) => e.preventDefault());
-
-        // Enhanced error handling
-        window.addEventListener('error', (e) => {
-            console.log('Global error:', e.error);
-            NotificationManager.show('An error occurred, but we\'re handling it!', 'warning', 3000);
-        });
-
-        // Unhandled promise rejection handler
-        window.addEventListener('unhandledrejection', (e) => {
-            console.log('Unhandled promise rejection:', e.reason);
-            e.preventDefault();
-        });
-
-        // Performance monitoring
-        function monitorPerformance() {
-            if ('performance' in window && 'memory' in performance) {
-                const memory = performance.memory;
-                console.log(`Memory usage: ${Math.round(memory.usedJSHeapSize / 1048576)}MB`);
-                
-                if (memory.usedJSHeapSize > 100 * 1048576) { // 100MB threshold
-                    console.log('High memory usage detected, optimizing...');
-                    // Additional optimizations could be applied here
-                }
-            }
-        }
-
-        // Monitor performance every 30 seconds
-        setInterval(monitorPerformance, 30000);
-
-        // Service Worker registration for caching (if available)
-        if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
-            navigator.serviceWorker.register('/sw.js').catch(() => {
-                console.log('Service Worker registration failed');
-            });
-        }
-    </script>
+	    </script>
 </body>
 </html>
