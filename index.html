@@ -792,7 +792,7 @@
             <button class="control-button" onclick="toggleMusic()" id="musicToggle">
                 <i class="fas fa-play"></i>
             </button>
-            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="100" onchange="adjustVolume()">
+            <input type="range" class="volume-slider" id="volumeSlider" min="100" max="100" value="100" onchange="adjustVolume()">
             <div class="volume-display" id="volumeDisplay">100%</div>
         </div>
 
@@ -815,7 +815,7 @@
     </div>
 
     <!-- Audio Element -->
-    <audio id="backgroundMusic" loop preload="auto" volume="0.100">
+    <audio id="backgroundMusic" loop preload="auto" volume="0.10">
         <source src="./assets/audio/background-music.mp3" type="audio/mpeg">
     </audio>
 
@@ -908,12 +908,6 @@
                     } else {
                         await setDoc(statsRef, { totalViews: 1 });
                     }
-
-                    // Show welcome message for new visitors
-                    setTimeout(() => {
-                        showToast("Welcome To My Site Web By ITS_ZAKI");
-                        NotificationManager.show('Thank you for visiting!', 'success', 3000);
-                    }, 2000);
                 }
 
                 const viewerRef = doc(db, "viewers", viewerId);
@@ -1313,7 +1307,7 @@
                     AppState.analyser.fftSize = 256;
                     
                     // Set initial volume to 100%
-                    music.volume = 0.100;
+                    music.volume = 0.9;
                     
                     return true;
                 } catch (error) {
