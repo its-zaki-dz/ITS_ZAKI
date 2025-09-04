@@ -792,7 +792,7 @@
             <button class="control-button" onclick="toggleMusic()" id="musicToggle">
                 <i class="fas fa-play"></i>
             </button>
-            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50" onchange="adjustVolume()">
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="100" onchange="adjustVolume()">
             <div class="volume-display" id="volumeDisplay">100%</div>
         </div>
 
@@ -815,7 +815,7 @@
     </div>
 
     <!-- Audio Element -->
-    <audio id="backgroundMusic" loop preload="auto" volume="0.5">
+    <audio id="backgroundMusic" loop preload="auto" volume="0.10">
         <source src="./assets/audio/background-music.mp3" type="audio/mpeg">
     </audio>
 
